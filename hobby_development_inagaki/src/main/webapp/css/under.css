@@ -1,0 +1,573 @@
+@charset "UTF-8";@charset "UTF-8";
+
+:root{
+    --colorWhite: #fffded;
+    --colorBrown: #884b23;
+    --colorGreen: #4e7851;
+    --colorBlack: #333;
+    --colorYellow: #fcedbf;
+}
+
+body{
+    box-sizing: border-box;
+    color: var(--colorBlack);
+    line-height: inherit;
+    letter-spacing: .1em;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+.main-title, .g-nav, .contents-title{
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+}
+.indoor{ /* インドアの背景色 */
+    background-color: #cc9966;
+}
+.outdoor{ /* アウトドアの背景色 */
+    background-color: #78bd7d;
+}
+
+/* 共通部分
+---------------------------------------- */
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Header
+---------------------------------------- */
+.header{
+    padding: 42px 0;
+    max-width: 1600px;
+    margin: 0 8%;
+}
+.g-nav{
+    font-size: 1.6rem;
+    text-align: right;
+    list-style: none;
+}
+.g-nav li{
+    display: inline-block;
+    margin: 0 1%;
+}
+.g-nav a{
+    padding: 4px 2px;
+    color: var(--colorWhite);
+}
+.g-nav .active{
+    font-weight: 600;
+    border-bottom: 1.6px solid var(--colorWhite);
+}
+.g-nav a:hover{
+    opacity: .6;
+}
+.navi-btn-box{
+    display: none;
+}
+
+/* Main
+---------------------------------------- */
+/* mv
+---------------------------------------- */
+.main-title{
+    margin-top: 20px;
+    color: var(--colorWhite);
+    text-align: center;
+}
+.main-title h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.main-title span{
+    font-size: 2rem;
+}
+.main-title p{
+    margin-top: 12px;
+    font-size: 1.4rem;
+}
+/* MV */
+.mv-box{
+    position: relative;
+}
+/* キービジュアル */
+.mv-img{
+    width: 100%;
+    margin: 40px 0;
+}
+.comment{
+    position: absolute;
+    inset: 0;
+    top: 12%;
+    left: 76%;
+    transform: rotateZ(28deg);
+    transform-origin: left top;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--colorWhite);
+}
+/* アイコンボタン */
+.btn-box{
+    flex-wrap: wrap;
+    padding: 40px 4% 80px;
+    position: absolute;
+    inset: 0px;
+}
+.btn img{
+    padding: 0 40px;
+    margin-top: 20px;
+    max-width: 240px;
+    height: auto;
+}
+.btn p{
+    margin-top: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--colorWhite);
+}
+/* ボタンホバー 切り替えの動き */
+.btn{
+    position: relative;
+}
+.btn img:nth-of-type(2){
+    position: absolute;
+    inset: 0;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.btn:hover img:nth-of-type(2) {
+    opacity: 0;
+}
+/* 注意書き */
+.attention{
+    margin: 40px auto;
+    padding: 40px 54px;
+    width: 40%;
+    border: 2px solid var(--colorWhite);
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--colorWhite);
+}
+
+/* サイドナビ
+---------------------------------------- */
+/* left */
+.side-left{
+    margin-left: 8vw; /* X方向 画面の左端へ */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%); /* Y方向 画面の中央へ */
+    z-index: 9990;
+    display: none;
+    width: 10%;
+}
+.side-left img{
+    max-width: 90%;
+}
+.side-left a img:hover{
+    opacity: .8;
+    background-color: var(--colorWhite);
+    border: .5px solid var(--colorWhite);
+}
+/* right */
+.side-right{
+    padding: 1%;
+    margin-left: 85vw; /* X方向 画面の右端へ */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%); /* Y方向 画面の中央へ */
+    z-index: 9990;
+    display: none;
+}
+.side-right img{
+    max-width: 50%;
+}
+.btn-right{
+    margin: 8px 0;
+}
+/* ボタンホバー 切り替えの動き */
+.btn-right{
+    position: relative;
+}
+.btn-right img:nth-of-type(2){
+    position: absolute;
+    inset: 0;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.btn-right:hover img:nth-of-type(2) {
+    opacity: 0;
+}
+
+/* コンテンツ
+---------------------------------------- */
+.contents{
+    padding: 40px 6%;
+    margin: 200px auto 0;
+    width: 55%;
+    background-color: var(--colorYellow);
+    border-radius: 50px;
+    border: 4px solid var(--colorBrown);
+    position: relative;
+}
+.indoor .contents{ /* インドアの色指定 */
+    border: 4px solid var(--colorBrown);
+}
+.outdoor .contents{ /* アウトドアの色指定 */
+    border: 4px solid var(--colorGreen);
+}
+.contents-title{
+    padding-bottom: 8px;
+    padding-left: 4%;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.indoor .contents-title{ /* イントドアの色指定 */
+    border-bottom: 2px solid var(--colorBrown);
+}
+.outdoor .contents-title{ /* アウトドアの色指定 */
+    border-bottom: 2px solid var(--colorGreen);
+}
+.contents-img{
+    max-width: 100%;
+    height: auto;
+    margin: 16px 0;
+}
+.star{
+    font-size: 1.2rem;
+}
+.index, .desc{
+    margin: 0 8%;
+}
+.indoor .desc{ /* イントドアの色指定 */
+    color: var(--colorBrown);
+}
+.outdoor .desc{ /* アウトドアの色指定 */
+    color: var(--colorGreen);
+}
+.explain{
+    margin-top: 16px;
+    font-size: 1rem;
+}
+/* 左上目印のアイコン */
+.contents-mark{
+    position: absolute;
+    inset: 0;
+    max-width: 180px;
+    top: -120px;
+    left: -80px;
+    z-index: 99;
+}
+/* 背景のアイコン */
+.contents-back{
+    position: absolute;
+    inset: 0;
+    top: 58%;
+    left: 45%;
+    width: 60%;
+    opacity: .15;
+}
+/* おすすめのふきだし */
+.dialogue{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    inset: 0;
+    top: -140px;
+    left: 55%;
+}
+/* Footer
+---------------------------------------- */
+.footer{
+    margin-top: 40px;
+    padding: 80px 0;
+    text-align: center;
+    color: var(--colorWhite);
+}
+
+
+/* レスポンシブ 
+---------------------------------------*/
+@media (max-width:820px){
+    /*========= 途中からハンバーガーメニューに変化するのためのCSS ===============*/
+
+    /*========= ボタンのためのCSS ===============*/
+
+/*ボタン全体の形状*/
+.openbtn1{
+    /*はじめは非表示に*/
+    display: none;
+    /*ボタンの位置*/
+    position:fixed;
+    top:10px;
+    right: 10px;
+    z-index: 999;
+    /*ボタンの形状*/
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    border-radius: 5px;
+}
+
+/*ボタンのアイコン設定*/
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #333;
+    width: 45%;
+}
+
+
+.openbtn1 span:nth-of-type(1) {
+    top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+    top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+    top:31px;
+}
+
+/*activeクラスが付与された後のボタンのアイコン設定*/
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+@keyframes fadeDownAnime{
+    from {
+    opacity: 0;
+    ransform: translateY(-100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+
+/*========= ヘッダーナビゲーションのためのCSS ===============*/
+
+/*==ヘッダーの形状*/
+#header{
+    height: 70px;
+    width:90%;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/*.doneクラスがついたヘッダー*/
+#header.dnone {
+    opacity: 0;/*透過0にして非表示に*/
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+#header.dnone.panelactive {
+    opacity: 1;/*不透明にして出現*/
+}
+
+
+/*==ヘッダーのテキストナビゲーションの形状*/
+#g-navi ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#g-navi ul li a{
+    display: block;
+    text-decoration: none;
+    color: #666;
+    padding:10px;
+}
+
+#g-navi ul li.current a,
+#g-navi ul li a:hover{
+    color:#fff; 
+}
+#g-navi ul li.navi-btn-box{
+    display: flex;
+}
+/*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+#header.dnone #g-navi{
+    /*固定位置にして最背面に*/
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*高さと幅*/  
+    width:100%;
+    height: 100%;
+    /*天地中央＆テキスト中央揃え*/  
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*はじめは透過0に*/  
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+#header.dnone.panelactive #g-navi{
+    opacity: 1;/*不透明に*/
+    z-index:3;/*最前面に*/
+    background:#eee;
+}
+
+#header.dnone.panelactive #g-navi ul{
+    display:block;/*flexの横並びをblockにして縦並びに*/
+}
+
+
+/*リストの形状*/
+
+#header.dnone.panelactive #g-navi li .navi-home{
+    color: #333;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition:all 0.3s;
+}
+#header.dnone.panelactive #g-navi li .navi-indoor{
+    color: #884b23;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition:all 0.3s;
+}
+#header.dnone.panelactive #g-navi li .navi-outdoor{
+    color: #4e7851;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition:all 0.3s;
+}
+section{
+    position: relative;
+    z-index: 1;
+}
+
+    .mv-img{
+        height: 800px;
+    }
+    .btn-box{
+        padding: 100px 4% 80px;
+    }
+    .comment{
+        top: 7%;
+        left: 65%;
+        font-size: 1.1rem;
+        transform: rotateZ(15deg);
+    }
+    .attention{
+        width: 70%;
+    }
+    .side-left a{
+        display: none;
+    }
+    .side-right a{
+        display: none;
+    }
+    .contents{
+        width: 70%;
+    }
+    .contents-mark{
+        max-width: 140px;
+        top: -77px;
+        left: -73px;
+    }
+}
+
+@media (max-width:414px) {
+    .g-nav{
+        font-size: 1rem;
+    }
+    .main-title h1{
+        font-size: 2rem;
+    }
+    .main-title p{
+        font-size: 1rem;
+    }
+    .comment{
+        font-size: 0.5rem;
+        top: 10%;
+        left: 60%;
+    }
+    .dialogue{
+        top: -80px;
+        left: 50%;
+    }
+    .btn{
+        width: 50%;
+    }
+    .btn img{
+        max-width: 200px;
+    }
+    .btn-box{
+        padding: 120px 1% 80px;
+    }
+    .attention{
+        width: 80%;
+        font-size: 1rem;
+        padding: 40px 10px;
+    }
+    .contents{
+        width: 80%;
+    }
+    .contents-mark{
+        max-width: 85px;
+        top: -45px;
+        left: -37px;
+    }
+}
