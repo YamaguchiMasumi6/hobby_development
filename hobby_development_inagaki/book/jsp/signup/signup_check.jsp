@@ -25,13 +25,13 @@
             <% 
             try {
                 // JDBCドライバを読み込み
-                ("com.mysql.cj.jdbc.Driver").newInstance();
+                ("org.postgresql.Driver").newInstance();
                 // データベースに接続
-                String url = "jdbc:mysql://localhost:8003/phpMyAdmin5"; 
-                String user = "root"; 
-                String pass = "root"; 
+                String url = "jdbc:postgresql://localhost5431/inagakitokuhito"; // データベースのURL
+    			String user = "inagakitokuhito"; 
+    			String pass = "tokuto4052"; 
                 Connection conn = DriverManager.getConnection(url, user, pass);
-
+				
                 // 現在の最大のidを取得
                 String sqlMaxId = "SELECT MAX(id) AS max_id FROM users";
                 Statement stmt = conn.createStatement();

@@ -14,7 +14,7 @@
         <div class="wrapper">
 
             <h1>ログイン</h1>
-            <form method="post" action="../index.jsp">
+            <form method="post" action="signup_check.jsp">
                 <label for="username">ユーザー名：</label>
                 <input type="text" id="login" name="username"><br>
 

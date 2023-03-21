@@ -9,16 +9,15 @@
 <link rel="stylesheet" href="../css/under.css">
 </head>
 <body class="outdoor">
-	<header class="header" id="header">
-        <ul class="g-nav" id="g-navi">
-            <li><a href="index.jsp" class="navi-home">HOME</a></li>
-            <li><a href="#" class="active navi-outdoor">Outdoors</a></li>
-            <li><a href="indoor.jsp" class="navi-indoor">Indoors</a></li>
-            <li><a href="contact.jsp" class="nav-content">Contact</a></li>
-            <li><a href="#" class="nav-db">DateBase</a></li>
-        </ul>
-    </header>
-
+<header class="header" id="header">
+    <ul class="g-nav" id="g-navi">
+        <li><a href="#" class="active navi-home">Home</a></li>
+        <li><a href="outdoor.jsp" class="navi-outdoor">Outdoors</a></li>
+        <li><a href="indoor.jsp" class="navi-indoor">Indoors</a></li>
+        <li><a href="../contact/contact.jsp" class="nav-content">Contact</a></li>
+        <li><a href="" class="navi-db">DateBase</a></li>
+    </ul>
+</header>
     <div class="openbtn1"><span></span><span></span><span></span></div>
 
     <main>
