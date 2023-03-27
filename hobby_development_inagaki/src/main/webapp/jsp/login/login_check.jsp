@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
+
 <%　　
 // フォームからのデータを取得し、Mapに格納
 Map<String, String> userData = new HashMap<>();
