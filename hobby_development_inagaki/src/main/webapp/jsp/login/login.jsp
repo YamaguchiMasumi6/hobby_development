@@ -15,7 +15,7 @@
 
             <h1>ログイン</h1>
             <form method="post" action="signup_check.jsp">
-                <label for="username">ユーザー名：</label>
+                <label for="username">メールアドレス：</label>
                 <input type="text" id="login" name="username"><br>
 
                 <label for="password">パスワード：</label>

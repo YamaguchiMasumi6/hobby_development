@@ -16,7 +16,7 @@
 
             <h1>新規ユーザー登録</h1>
             <form method="post" action="signup_check.jsp">
-                <label for="username">ユーザー名：</label>
+                <label for="username">メールアドレス：</label>
                 <input type="text" id="username" name="username"><br>
 
                 <label for="password">パスワード：</label>
