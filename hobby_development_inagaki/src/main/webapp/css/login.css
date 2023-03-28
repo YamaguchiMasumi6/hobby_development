@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+:root{
+    --textcolor: #ffffff;
+}
+
+body{
+    box-sizing: border-box;
+    color:var(--textcolor);
+    background-color: #cc9966;
+    line-height: inherit;
+    letter-spacing: .1em;
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+}
+
+/* 共通部分
+---------------------------------------- */
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+html{
+    font-size: 100%; 
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Main
+---------------------------------------- */
+.mv-top{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+#home{
+    background-image: url(../images/mv_top.jpg);
+    min-height: 100vh;
+    top: 0px;
+}
+
+p , h1{
+    text-align:center;
+}
+
+.wrapper{
+    text-align: center;
+}
+form {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 900;
+}
+
+input[type="text"],[type="password"]{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+input[type="radio"] {
+	display: inline-flex;
+	margin-bottom: 20px;
+}
+.gender{
+	color: black;
+	margin-bottom: 10px;
+}
+input[type="checkbox"]{
+	display: inline-flex;
+}
+.hobby{
+	color: black;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.link{
+	color: white;
+}
+
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* 414px以上、750px以下の幅に適応
+---------------------------------------- */
+
+@media ( max-width : 768px){
+    #home{
+        background-image: url(../images/PC_TOP_820.jpg);
+    }
+    .wrapper{
+        padding-top: 100px;
+    }
+}
+
+
+/* 414pxまでの幅に適応
+---------------------------------------- */
+
+@media ( max-width : 414px){
+    #home{
+        background-image: url(../images/PC_TOP_414.jpg);
+    }
+    .wrapper{
+        padding: 50px;
+    }
+}
